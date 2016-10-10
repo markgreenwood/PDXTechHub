@@ -3,6 +3,10 @@ body {
   background-color: #efefef;
 }
 
+.main-header {
+  background-image: url("/images/workspace-3_720.jpg");
+}
+
 h1 {
   font-family: 'Oswald', sans-serif;
 }
