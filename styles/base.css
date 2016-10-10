@@ -1,10 +1,26 @@
 body {
-
+  font-family: 'Raleway', sans-serif;
+  background-color: #efefef;
 }
 
-section p {
+h1 {
   font-family: 'Oswald', sans-serif;
 }
-select option {
-  font-family: 'Roboto', sans-serif;
+
+#one {
+  margin: 20px 20px;
+  padding: 20px 20px;
+  background-color: #bd5632;
+}
+
+#two {
+  margin: 20px 20px;
+  padding: 20px 20px;
+  background-color: #e1a94c;
+}
+
+#three {
+  margin: 20px 20px;
+  padding: 20px 20px;
+  background-color: #418259;
 }
