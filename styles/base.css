@@ -3,10 +3,8 @@ body {
 }
 
 section p {
-
+  font-family: 'Oswald', sans-serif;
 }
 select option {
-
+  font-family: 'Roboto', sans-serif;
 }
-font-family: 'Oswald', sans-serif;
-font-family: 'Roboto', sans-serif;
