@@ -1,6 +1,6 @@
-page('/', searchView.reveal);
-page('/results', resultsView.reveal);
-page('/company', companyView.reveal);
-page('/favorites', favoritesView.reveal);
+page('/', searchController.reveal);
+page('/results', resultsController.reveal);
+page('/company', companyController.reveal);
+page('/favorites', favoritesController.reveal);
 
 page();
