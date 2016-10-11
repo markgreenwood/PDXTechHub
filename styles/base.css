@@ -38,3 +38,6 @@ footer p {
   margin: 5px auto 5px auto;
   background-color: #e1a94c;
 }
+.template {
+  display: none;
+}
