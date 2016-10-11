@@ -15,6 +15,18 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/module.css">
 
+    <script id="job-template" type="text/x-handlebars-template">
+         <article>
+           <ul>
+             <li><a href="{{url}}">{{jobtitle}}</a></li>
+             <li>{{company}}</li>
+             <li>{{snippet}}</li>
+             <li>{{formattedLocation}}</li>
+             <li>{{formattedRelativeTime}}</li>
+           </ul>
+         </article>
+       </script>
+
   </head>
 
   <body>
@@ -100,12 +112,14 @@
 
     <!--Vendor scripts-->
     <script type="text/javascript" src="vendor/scripts/page.js"></script>
+    <script src="vendor/scripts/handlebars-v4.0.5.js"></script>
 
     <!--Model scripts-->
     <script type="text/javascript" src="scripts/models/jobPostModel.js"></script>
 
     <!--View scripts-->
     <script type="text/javascript" src="scripts/views/jobPostView.js"></script>
+    <script type="text/javascript" src="scripts/views/resultsView.js"></script>
 
     <!--Controller scripts-->
     <script type="text/javascript" src="scripts/controllers/searchController.js"></script>
