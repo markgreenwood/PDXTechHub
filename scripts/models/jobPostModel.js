@@ -9,11 +9,10 @@
   JobPost.allJobPosts = [];
 
   JobPost.prototype.toHtml = function() {
-    var $newJob = $('article.template').clone();
-    $newJob.removeAttr('class');
-    console.log($newJob);
-    $newJob.find('h2').append('this.jobtitle');
-    return $newJob;
+    var source = $('#job-template').html();
+    var template = Handlebars.compile(source);
+    var html = template(this);
+    return html;
   };
 
   JobPost.fetchResults = function(nextFunction) {
@@ -24,11 +23,12 @@
       JobPost.loadAll(data.results);
       nextFunction();
     });
+    // jobView.initResultsPage();
   };
 
   JobPost.loadAll = function (jobPostData) {
     jobPostData.forEach(function(job) {
-      JobPost.allJobPosts.push(job);
+      JobPost.allJobPosts.push(new JobPost(job));
     });
   };
 
