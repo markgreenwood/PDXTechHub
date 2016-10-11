@@ -1,40 +1,138 @@
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  color: #333333;
   background-color: #efefef;
 }
-header {
-  position: absolute;
-}
+
 .splash-image img {
   display: flex;
   width: 100%;
+  height: 100%
 }
+
+/* Header container */
+header {
+  position: absolute;
+  width: 100%;
+}
+
+.logo {
+  background-color: #bd5632;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+
 h1 {
   font-family: 'Oswald', sans-serif;
-  font-size: 32px;
+  font-size: 80px;
   color: #efefef;
   text-align: center;
+  padding: 10px;
+  bottom: 300px;
+  position: relative;
+  top: 22%;
 }
+
+h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 125px;
+  color: #efefef;
+  text-align: left;
+  margin: 5px;
+  position: relative;
+  bottom: 25px;
+}
+
+/* Main nav */
+.main-nav ul {
+  float: left;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+.main-nav li {
+  display: block;
+  text-align: center;
+  margin: 25px;
+  font-size: 38px;
+  padding: 5px;
+  border-bottom: 1px solid #efefef;
+}
+
+a, a:link, a:active {
+  text-decoration: none;
+  color: #333333;
+}
+
+a:hover, a:focus {
+  color: #e1a94c;
+}
+
+a:visited {
+  color: #e1a94c;
+}
+
+/* Main content */
+.landing-page {
+  width: 75%;
+  position: absolute;
+}
+
+.intro-p {
+  float: left;
+  clear: right;
+  margin: 2%;
+  width: 42%;
+  background-color: #e1a94c;
+  padding: 25px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.search-filter {
+  float: right;
+  margin: 2%;
+  width: 42%;
+  background-color: #e1a94c;
+  padding: 25px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+/* Sample color divs */
 #one {
   margin: 10px 20px;
   padding: 10px 20px;
   background-color: #bd5632;
 }
+
 #two {
   margin: 10px 20px;
   padding: 10px 20px;
   background-color: #e1a94c;
 }
+
 #three {
   margin: 10px 20px;
   padding: 10px 20px;
   background-color: #418259;
 }
+
+/* Tab container */
+.tab-container {
+  clear: both;
+}
+
+/* Footer */
 footer p {
   display: block;
+  width: 75%;
+  clear: both;
   text-align: center;
-  font-style: italic;
-  height: 24px;
-  margin: 5px auto 5px auto;
-  background-color: #e1a94c;
+  font-family: 'Lobster', cursive;
+  padding: 25px;
+  margin: 0 auto;
 }

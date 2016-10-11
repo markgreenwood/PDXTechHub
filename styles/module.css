@@ -1,6 +1,24 @@
-/*Navigation*/
-.hamburger img {
-  width: 2em;
-  float: right;
-  padding: .5em;
+/* Media queries */
+
+/* Smartphones */
+/*@media only screen and (min-device-width : 320px) and (max-device-width : 736px) {
+  .main-nav ul {
+    display: block;
+    padding: 0px 5px 0px 5px;
+    list-style: none;
+    clear: both;
+  }
+  .main-nav li {
+    margin-right: 5px;
+    font-size: 25px;
+    padding: 5px;
+    border-bottom: 1px solid #efefef;
+  }
+}*/
+
+ /*Tablets, desktops, laptops */
+@media only screen and (min-device-width : 736px) {
+  .hamburger img {
+    display: none;
+  }
 }
