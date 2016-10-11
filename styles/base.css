@@ -2,36 +2,39 @@ body {
   font-family: 'Raleway', sans-serif;
   background-color: #efefef;
 }
-
-.main-header {
-  background-size: cover;
-  background-image: url("../images/workspace-3_720.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  attachment: fixed;
+header {
+  position: absolute;
 }
-
+.splash-image img {
+  display: flex;
+  width: 100%;
+}
 h1 {
   font-family: 'Oswald', sans-serif;
   font-size: 32px;
   color: #efefef;
   text-align: center;
 }
-
 #one {
-  margin: 20px 20px;
-  padding: 20px 20px;
+  margin: 10px 20px;
+  padding: 10px 20px;
   background-color: #bd5632;
 }
-
 #two {
-  margin: 20px 20px;
-  padding: 20px 20px;
+  margin: 10px 20px;
+  padding: 10px 20px;
   background-color: #e1a94c;
 }
-
 #three {
-  margin: 20px 20px;
-  padding: 20px 20px;
+  margin: 10px 20px;
+  padding: 10px 20px;
   background-color: #418259;
+}
+footer p {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  height: 24px;
+  margin: 5px auto 5px auto;
+  background-color: #e1a94c;
 }
