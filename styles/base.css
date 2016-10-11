@@ -4,11 +4,18 @@ body {
 }
 
 .main-header {
-  background-image: url("/images/workspace-3_720.jpg");
+  background-size: cover;
+  background-image: url("../images/workspace-3_720.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  attachment: fixed;
 }
 
 h1 {
   font-family: 'Oswald', sans-serif;
+  font-size: 32px;
+  color: #efefef;
+  text-align: center;
 }
 
 #one {
