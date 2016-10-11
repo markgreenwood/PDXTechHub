@@ -2,29 +2,62 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>PDX Tech Hub</title>
+
+    <!-- Imported Font Links -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!-- CSS Script Links-->
+    <link rel='stylesheet' href='vendor/styles/normalize.css'>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel='stylesheet' href='styles/icons.css'>
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/module.css">
   </head>
   <body>
     <header>
-      <h1>PDX Tech Hub</h1>
+      <div class="main-header">
+        <h1>PDX Tech Hub</h1>
+        <nav class="main-nav">
+          <div class="hamburger">
+            <img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" alt="hamburger menu icon" />
+          </div>
+          <ul>
+            <li class="navtab">Search</li>
+            <li class="navtab">Results</li>
+            <li class="navtab">Company Info</li>
+            <li class="navtab">Favorites</li>
+          </ul>
+        </nav>
+      </div>
     </header>
+
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+
     <section id="landing-page" class="tab-content">
       <p>There are 20600 tech jobs in Portland, but how do you find the one
       that's right for you? This web app was built with the x-person in mind.
       We'll help you identify opportunities in your geographic area and in
       industries that are a good fit for you. [Enter search terms below to
       start]</p>
-      <select class="" name="">
+      <select id="city-selector">
         <option>Portland</option>
         <option>Beaverton</option>
         <option>Gresham</option>
+        <option>Hillsboro</option>
+        <option>Tigard</option>
       </select>
-      <select class="" name="">
+      <select id="radius-selector">
+        <option>5 mi</option>
         <option>10 mi</option>
-        <option value="option">25 mi</option>
-        <option>50 mi</option>
+        <option>15 mi</option>
+        <option>20 mi</option>
+        <option>25 mi</option>
       </select>
-      <select class="" name="">
+      <select id="biz-type-selector">
         <option>Health care</option>
         <option>Game development</option>
         <option>Advertising/agencies</option>
@@ -40,5 +73,7 @@
     <footer>
       &copy;2016 OurCoolCompany.com
     </footer>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/models/jobPostModel.js"></script>
   </body>
 </html>
