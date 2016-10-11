@@ -24,10 +24,10 @@
             <img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" alt="hamburger menu icon" />
           </div>
           <ul>
-            <li class="navtab">Search</li>
-            <li class="navtab">Results</li>
-            <li class="navtab">Company Info</li>
-            <li class="navtab">Favorites</li>
+            <li class="navtab"><a href="/">Search</a></li>
+            <li class="navtab"><a href="/results">Results</a></li>
+            <li class="navtab"><a href="/company">Company Info</a></li>
+            <li class="navtab"><a href="/favorites">Favorites</a></li>
           </ul>
         </nav>
       </div>
@@ -67,6 +67,9 @@
     <section id="results-page" class="tab-content">
       <p>This is our results page.</p>
     </section>
+    <section id="company-page" class="tab-content">
+      <p>This is our company page.</p>
+    </section>
     <section id="favorites-page" class="tab-content">
       <p>This is the favorites page.</p>
     </section>
@@ -74,6 +77,16 @@
       &copy;2016 OurCoolCompany.com
     </footer>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--Vendor scripts-->
+    <script type="text/javascript" src="vendor/scripts/page.js"></script>
+
+    <!--Model scripts-->
     <script type="text/javascript" src="scripts/models/jobPostModel.js"></script>
+
+    <!--View scripts-->
+    <script type="text/javascript" src="scripts/views/jobPostView.js"></script>
+
+    <!--Controller scripts-->
+    <script type="text/javascript" src="scripts/controllers/routes.js"></script>
   </body>
 </html>
