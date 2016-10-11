@@ -136,3 +136,6 @@ footer p {
   padding: 25px;
   margin: 0 auto;
 }
+.template {
+  display: none;
+}
