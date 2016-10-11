@@ -2,15 +2,16 @@
 (function(module) {
   var jobView = {};
 
-  jobView.renderJobResults = function (){
-    JobPost.allJobPosts.forEach( function(job){
-      console.log(job);
-      $('#results-page').append( job.toHtml() );
+  jobView.renderJobResults = function(){
+    console.log('running render job results on ' + JobPost.allJobPosts.length + 'objects');
+    JobPost.allJobPosts.forEach(function(job){
+      console.log('inside forEach loop');
+      $('#results-page').append(job.toHtml() );
       //JobPost.prototype.toHtml
     });
   };
+  JobPost.fetchResults(jobView.renderJobResults);
 
-  jobView.renderJobResults();
   module.jobView = jobView;
 
 
