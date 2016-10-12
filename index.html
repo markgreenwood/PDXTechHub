@@ -50,61 +50,65 @@
         </nav>
     </header>
 
-    <!--Header splash image-->
-    <div class="splash-image">
-      <img src="images/workspace-3_720.jpg"/>
-    </div>
-
-    <article class="template" data-category="placeholder-category">
-      <h2 id="job-title"></h2>
-    </article>
-
-    <section id="landing-page" class="tab-content">
-      <div class="intro-p">
-        <p>There are an estimated 20,600 tech jobs in Portland, but how do you find the one that's right for you? This web app was built with the x-person in mind. We'll help you identify opportunities in your geographic area and in industries that are a good fit for you. Choose your search preferences below to see what's out there!</p>
+    <main>
+      <!--Background image-->
+      <div class="background-image">
+        <img src="images/workspace-3_720.jpg"/>
       </div>
 
-      <div class="search-filter">
-        <select id="city-selector">
-          <option>Portland</option>
-          <option>Beaverton</option>
-          <option>Gresham</option>
-          <option>Hillsboro</option>
-          <option>Tigard</option>
-        </select>
-        <select id="radius-selector">
-          <option>5 mi</option>
-          <option>10 mi</option>
-          <option>15 mi</option>
-          <option>20 mi</option>
-          <option>25 mi</option>
-        </select>
-        <select id="biz-type-selector">
-          <option>Health care</option>
-          <option>Game development</option>
-          <option>Advertising/agencies</option>
-          <option>Real estate</option>
-        </select>
+      <article class="template" data-category="placeholder-category">
+        <h2 id="job-title"></h2>
+      </article>
+
+      <section id="landing-page" class="tab-content">
+        <div class="intro-p">
+          <p>There are an estimated 20,600 tech jobs in Portland, but how do you find the one that's right for you? This web app was built with the x-person in mind. We'll help you identify opportunities in your geographic area and in industries that are a good fit for you. Choose your search preferences below to see what's out there!</p>
+        </div>
+
+        <div class="search-filter">
+          <select id="city-selector">
+            <option>Portland</option>
+            <option>Beaverton</option>
+            <option>Gresham</option>
+            <option>Hillsboro</option>
+            <option>Tigard</option>
+          </select>
+          <select id="radius-selector">
+            <option>5 mi</option>
+            <option>10 mi</option>
+            <option>15 mi</option>
+            <option>20 mi</option>
+            <option>25 mi</option>
+          </select>
+          <select id="biz-type-selector">
+            <option>Health care</option>
+            <option>Game development</option>
+            <option>Advertising/agencies</option>
+            <option>Real estate</option>
+          </select>
+        </div>
+      </section>
+
+      <div class="tab-container">
+        <section  id="results-page" class="tab-content">
+          <div id="job-results"> <!-- Need to change this for rendering in js -->
+          </div>
+          <div id="map-results">
+            <ul>
+              <li>this is a map</li>
+              <li>i know it doesn't look like a map</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="company-page" class="tab-content">
+        </section>
+
+        <section id="favorites-page" class="tab-content">
+        </section>
+
       </div>
-    </section>
-
-    <div class="tab-container">
-      <section  id="results-page" class="tab-content">
-        <div id="job-results"> <!-- Need to change this for rendering in js -->
-        </div>
-
-        <div id="map-results">
-          <ul>
-            <li>this is a map</li>
-            <li>i know it doesn't look like a map</li>
-          </ul>
-        </div>
-      </section>
-      <section id="company-page" class="tab-content">
-      </section>
-      <section id="favorites-page" class="tab-content">
-      </section>
-    </div>
+    </main>
 
     <footer>
       <p>&copy; 2016</p>
