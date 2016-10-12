@@ -29,7 +29,7 @@
   </head>
 
   <body>
-    <header id="main-header">
+    <header class="main-header">
       <div class="logo">
           <img src="images/pdx-logo-1.png"/>
           <h1>tech hub</h1>
@@ -61,7 +61,8 @@
 
       <section id="landing-page" class="tab-content">
         <div class="intro-p">
-          <p>There are an estimated 20,600 tech jobs in Portland, but how do you find the one that's right for you? This web app was built with the x-person in mind. We'll help you identify opportunities in your geographic area and in industries that are a good fit for you. Choose your search preferences below to see what's out there!</p>
+          <p id="question">There are an estimated 20,600 tech jobs in Portland, but how do you find the one that's right for you?</p>
+          <p id="pitch">This web app was built with the x-person in mind. We'll help you identify opportunities in your geographic area and in industries that are a good fit for you. Choose your search preferences below to see what's out there!</p>
         </div>
 
         <div class="search-filter">
@@ -85,13 +86,13 @@
             <option>Advertising/agencies</option>
             <option>Real estate</option>
           </select>
-          <button type="submit" id="submit-search">Submit</button>
+          <button id="submit-search" type="submit">Submit</button>
         </div>
       </section>
 
       <div class="tab-container">
         <section  id="results-page" class="tab-content">
-          <div id="job-results"> <!-- Need to change this for rendering in js -->
+          <div id="job-results">
           </div>
           <div id="map-results">
             <ul>

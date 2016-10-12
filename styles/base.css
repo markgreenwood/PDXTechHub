@@ -1,6 +1,6 @@
 body {
   font-family: 'Oswald', sans-serif;
-  font-size: 28px;
+  font-size: 1em;
   color: #333333;
   background-color: #efefef;
 }
@@ -12,11 +12,11 @@ body {
 }
 
 /* Header container */
-header {
+.main-header, .main-nav {
   position: absolute;
-  float: left;
-  clear: right;
-  padding: 5%;
+  display: block;
+  margin: auto 0;
+  width: 99%;
 }
 
 .logo img {
@@ -36,18 +36,17 @@ header {
 
 /* Main nav */
 .main-nav ul {
-  float: left;
-  padding: 0;
-  list-style: none;
-  clear: both;
+  display: block;
+  list-style-type: none;
+  padding: 0px;
 }
 
 .main-nav li {
-  display: block;
-  text-align: center;
-  margin: 2%;
-  padding: 5%;
+  font-size: .5em;
+  padding-left: 5px;
+  padding-right: 5px;
   border-bottom: 1px solid #efefef;
+  text-align: center;
 }
 
 a, a:link, a:active {
@@ -65,22 +64,43 @@ a:visited {
 
 /* Main content */
 #landing-page {
-  border-radius: 15px;
   margin: 30px;
 }
 
 .intro-p {
   position: relative;
-  padding: 2%;
+}
+
+#question {
+  color: #bd5632;
+  font-size: 1em;
   text-align: center;
-  border-radius: 15px;
+}
+
+#pitch {
+  font-size: .6em;
+  text-align: left;
 }
 
 .search-filter {
-  position: relative;
-  padding: 2%;
-  text-align: center;
-  border-radius: 15px;
+  display: block;
+  font-size: .5em;
+}
+
+#city-selector, #radius-selector, #biz-type-selector {
+  display: inline-block;
+  float: left;
+  width: 70px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#submit-search {
+  width: 70px;
+  margin: auto 0;
+  display: block;
+  float: right;
+  clear: both;
 }
 
 /* Tab container */
