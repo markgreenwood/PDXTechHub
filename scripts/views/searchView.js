@@ -7,6 +7,7 @@
       var radius = $('#radius-selector').val();
       var biztype = $('#biz-type-selector').val();
       console.log('City: ' + city + ', Radius: ' + radius + ', Biztype: ' + biztype);
+      resultsView.getResults({ 'city': city, 'radius': radius, 'biztype': biztype });
     });
   };
 
