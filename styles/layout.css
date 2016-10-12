@@ -1,1 +1,11 @@
-
+#map-results {
+ background-color: green;
+ display: inline-block;
+ width: 49%;
+}
+#job-results {
+ background-color: red;
+ display: inline-block;
+ width: 49%;
+float: left;
+}
