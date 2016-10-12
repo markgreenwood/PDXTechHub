@@ -7,7 +7,7 @@
   resultsView.renderJobResults = function(){
     JobPost.allJobPosts.forEach(function(job){
       console.log('inside forEach loop', job);
-      $('#results-page').append( job.toHtml() );
+      $('#job-results').append( job.toHtml() );
       //JobPost.prototype.toHtml
     });
   };
