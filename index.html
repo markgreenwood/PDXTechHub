@@ -14,6 +14,19 @@
     <link rel='stylesheet' href='styles/icons.css'>
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/module.css">
+
+    <script id="job-template" type="text/x-handlebars-template">
+         <article>
+           <ul>
+             <li><a href="{{url}}" target="_blank">{{jobtitle}}</a></li>
+             <li>{{company}}</li>
+             <li>{{snippet}}</li>
+             <li>{{formattedLocation}}</li>
+             <li>{{formattedRelativeTime}}</li>
+           </ul>
+         </article>
+       </script>
+
   </head>
 
   <body>
@@ -38,14 +51,9 @@
     </header>
 
     <!--Header splash image-->
-    <div class="splash-image">
+    <!-- <div class="splash-image">
       <img src="images/workspace-3_720.jpg"/>
-    </div>
-
-    <!-- Sample colors -->
-    <!-- <div id="one"></div>
-    <div id="two"></div>
-    <div id="three"></div> -->
+    </div> -->
 
     <article class="template" data-category="placeholder-category">
       <h2 id="job-title"></h2>
@@ -79,17 +87,16 @@
         </select>
       </div>
     </section>
+
     <div class="tab-container">
       <section id="results-page" class="tab-content">
-        <p>This is our results page.</p>
       </section>
       <section id="company-page" class="tab-content">
-        <p>This is our company page.</p>
       </section>
       <section id="favorites-page" class="tab-content">
-        <p>This is the favorites page.</p>
       </section>
     </div>
+
     <footer>
       <p>&copy; 2016</p>
     </footer>
@@ -99,12 +106,14 @@
 
     <!--Vendor scripts-->
     <script type="text/javascript" src="vendor/scripts/page.js"></script>
+    <script src="vendor/scripts/handlebars-v4.0.5.js"></script>
 
     <!--Model scripts-->
     <script type="text/javascript" src="scripts/models/jobPostModel.js"></script>
 
     <!--View scripts-->
     <script type="text/javascript" src="scripts/views/jobPostView.js"></script>
+    <script type="text/javascript" src="scripts/views/resultsView.js"></script>
 
     <!--Controller scripts-->
     <script type="text/javascript" src="scripts/controllers/searchController.js"></script>
