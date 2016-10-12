@@ -139,3 +139,6 @@ footer p {
 .template {
   display: none;
 }
+li {
+  display: block;
+}
