@@ -21,7 +21,9 @@
     resultsView.renderMap();
   };
 
-  JobPost.fetchResults({ city: 'portland', radius: '20' }, resultsView.renderResultsPage);
+  resultsView.getResults = function(searchparams) {
+    JobPost.fetchResults(searchparams, resultsView.renderResultsPage);
+  };
 
   module.resultsView = resultsView;
 
