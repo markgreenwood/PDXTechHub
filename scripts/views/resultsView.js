@@ -12,7 +12,6 @@
     });
   };
 
-
   resultsView.renderMap = function() {
     console.log('rendering map');
   };
@@ -22,9 +21,8 @@
     resultsView.renderMap();
   };
 
-  JobPost.fetchResults(resultsView.renderResultsPage);
+  JobPost.fetchResults({ city: 'portland', radius: '20' }, resultsView.renderResultsPage);
 
   module.resultsView = resultsView;
-
 
 })(window);
