@@ -14,7 +14,10 @@ body {
 /* Header container */
 header {
   position: absolute;
-  width: 100%;
+  width: 33%;
+  float: left;
+  clear: right;
+  padding: 5%;
 }
 
 .logo {
@@ -26,18 +29,17 @@ header {
 
 h1 {
   font-family: 'Oswald', sans-serif;
-  font-size: 80px;
+  font-size: 300%;
   color: #efefef;
   text-align: center;
   padding: 10px;
-  bottom: 300px;
   position: relative;
   top: 22%;
 }
 
 h2 {
   font-family: 'Lobster', cursive;
-  font-size: 125px;
+  font-size: 450%;
   color: #efefef;
   text-align: left;
   margin: 5px;
@@ -56,9 +58,9 @@ h2 {
 .main-nav li {
   display: block;
   text-align: center;
-  margin: 25px;
-  font-size: 38px;
-  padding: 5px;
+  margin: 2%;
+  padding: 5%;
+  font-size: 100%;
   border-bottom: 1px solid #efefef;
 }
 
@@ -76,66 +78,45 @@ a:visited {
 }
 
 /* Main content */
-.landing-page {
-  width: 75%;
+#landing-page {
   position: absolute;
+  background-color: #efefef;
+  border-radius: 15px;
+  opacity: .6;
+  width: 66%;
+  top: 1%;
+  right: 1%;
 }
 
 .intro-p {
-  float: left;
-  clear: right;
-  margin: 2%;
-  width: 42%;
-  background-color: #e1a94c;
-  padding: 25px;
+  position: relative;
+  padding: 2%;
   text-align: center;
   border-radius: 15px;
 }
 
 .search-filter {
-  float: right;
-  margin: 2%;
-  width: 42%;
-  background-color: #e1a94c;
-  padding: 25px;
+  position: relative;
+  padding: 2%;
   text-align: center;
   border-radius: 15px;
 }
 
-/* Sample color divs */
-#one {
-  margin: 10px 20px;
-  padding: 10px 20px;
-  background-color: #bd5632;
-}
-
-#two {
-  margin: 10px 20px;
-  padding: 10px 20px;
-  background-color: #e1a94c;
-}
-
-#three {
-  margin: 10px 20px;
-  padding: 10px 20px;
-  background-color: #418259;
-}
-
 /* Tab container */
 .tab-container {
-  clear: both;
+  display: none;
 }
 
 /* Footer */
 footer p {
   display: block;
-  width: 75%;
   clear: both;
   text-align: center;
   font-family: 'Lobster', cursive;
-  padding: 25px;
+  padding: 2%;
   margin: 0 auto;
 }
+
 .template {
   display: none;
 }
