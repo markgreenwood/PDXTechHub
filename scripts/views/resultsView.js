@@ -5,6 +5,7 @@
   resultsView.map = {};
 
   resultsView.renderJobResults = function(){
+    $('#job-results').empty();
     JobPost.allJobPosts.forEach(function(job){
       console.log('inside forEach loop', job);
       $('#job-results').append( job.toHtml() );
