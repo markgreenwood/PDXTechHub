@@ -14,37 +14,24 @@ body {
 /* Header container */
 header {
   position: absolute;
-  width: 33%;
   float: left;
   clear: right;
   padding: 5%;
 }
 
-.logo {
-  background-color: #bd5632;
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
+.logo img {
+  display: block;
+  width: 50px;
+  margin: 0 auto;
 }
 
-h1 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 300%;
-  color: #efefef;
-  text-align: center;
-  padding: 10px;
-  position: relative;
-  top: 22%;
-}
-
-h2 {
+.logo h1 {
   font-family: 'Lobster', cursive;
-  font-size: 450%;
+  font-size: 1em;
+  text-align: center;
   color: #efefef;
-  text-align: left;
-  margin: 5px;
-  position: relative;
-  bottom: 25px;
+  padding: 0px;
+  margin: 0px;
 }
 
 /* Main nav */
@@ -60,7 +47,6 @@ h2 {
   text-align: center;
   margin: 2%;
   padding: 5%;
-  font-size: 100%;
   border-bottom: 1px solid #efefef;
 }
 
@@ -79,12 +65,8 @@ a:visited {
 
 /* Main content */
 #landing-page {
-  position: absolute;
-  background-color: rgba(239, 239, 239, 0.5);
   border-radius: 15px;
-  width: 66%;
-  top: 1%;
-  right: 1%;
+  margin: 30px;
 }
 
 .intro-p {
