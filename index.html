@@ -6,74 +6,126 @@
     <title>PDX Tech Hub</title>
 
     <!-- Imported Font Links -->
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Oswald" rel="stylesheet">
+
     <!-- CSS Script Links-->
     <link rel='stylesheet' href='vendor/styles/normalize.css'>
     <link rel="stylesheet" href="styles/base.css">
     <link rel='stylesheet' href='styles/icons.css'>
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/module.css">
+
+    <script id="job-template" type="text/x-handlebars-template">
+         <article>
+           <ul>
+             <li><a href="{{url}}">{{jobtitle}}</a></li>
+             <li>{{company}}</li>
+             <li>{{snippet}}</li>
+             <li>{{formattedLocation}}</li>
+             <li>{{formattedRelativeTime}}</li>
+           </ul>
+         </article>
+       </script>
+
   </head>
+
   <body>
-    <header>
-      <div class="main-header">
-        <h1>PDX Tech Hub</h1>
+    <header id="main-header">
+      <div class="logo">
+        <h1>P D X</h1>
+      </div>
+      <h2>tech hub</h2>
+        <!--Main nav-->
         <nav class="main-nav">
+          <!--Hamburger menu-->
           <div class="hamburger">
-            <img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" alt="hamburger menu icon" />
+            <img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" alt="hamburger menu icon"/>
           </div>
           <ul>
-            <li class="navtab">Search</li>
-            <li class="navtab">Results</li>
-            <li class="navtab">Company Info</li>
-            <li class="navtab">Favorites</li>
+            <li class="navtab"><a href="/">SEARCH</a></li>
+            <li class="navtab"><a href="/results">RESULTS</a></li>
+            <li class="navtab"><a href="/company">COMPANY INFO</a></li>
+            <li class="navtab"><a href="/favorites">FAVORITES</a></li>
           </ul>
         </nav>
-      </div>
     </header>
 
-    <div id="one"></div>
+    <!--Header splash image-->
+    <div class="splash-image">
+      <img src="images/workspace-3_720.jpg"/>
+    </div>
+
+    <!-- Sample colors -->
+    <!-- <div id="one"></div>
     <div id="two"></div>
-    <div id="three"></div>
+    <div id="three"></div> -->
+
+    <article class="template" data-category="placeholder-category">
+      <h2 id="job-title"></h2>
+    </article>
 
     <section id="landing-page" class="tab-content">
-      <p>There are 20600 tech jobs in Portland, but how do you find the one
-      that's right for you? This web app was built with the x-person in mind.
-      We'll help you identify opportunities in your geographic area and in
-      industries that are a good fit for you. [Enter search terms below to
-      start]</p>
-      <select id="city-selector">
-        <option>Portland</option>
-        <option>Beaverton</option>
-        <option>Gresham</option>
-        <option>Hillsboro</option>
-        <option>Tigard</option>
-      </select>
-      <select id="radius-selector">
-        <option>5 mi</option>
-        <option>10 mi</option>
-        <option>15 mi</option>
-        <option>20 mi</option>
-        <option>25 mi</option>
-      </select>
-      <select id="biz-type-selector">
-        <option>Health care</option>
-        <option>Game development</option>
-        <option>Advertising/agencies</option>
-        <option>Real estate</option>
-      </select>
+      <div class="intro-p">
+        <p>There are an estimated 20,600 tech jobs in Portland, but how do you find the one that's right for you? This web app was built with the x-person in mind. We'll help you identify opportunities in your geographic area and in industries that are a good fit for you. Choose your search preferences below to see what's out there!</p>
+      </div>
+
+      <div class="search-filter">
+        <select id="city-selector">
+          <option>Portland</option>
+          <option>Beaverton</option>
+          <option>Gresham</option>
+          <option>Hillsboro</option>
+          <option>Tigard</option>
+        </select>
+        <select id="radius-selector">
+          <option>5 mi</option>
+          <option>10 mi</option>
+          <option>15 mi</option>
+          <option>20 mi</option>
+          <option>25 mi</option>
+        </select>
+        <select id="biz-type-selector">
+          <option>Health care</option>
+          <option>Game development</option>
+          <option>Advertising/agencies</option>
+          <option>Real estate</option>
+        </select>
+      </div>
     </section>
-    <section id="results-page" class="tab-content">
-      <p>This is our results page.</p>
-    </section>
-    <section id="favorites-page" class="tab-content">
-      <p>This is the favorites page.</p>
-    </section>
+    <div class="tab-container">
+      <section id="results-page" class="tab-content">
+        <p>This is our results page.</p>
+      </section>
+      <section id="company-page" class="tab-content">
+        <p>This is our company page.</p>
+      </section>
+      <section id="favorites-page" class="tab-content">
+        <p>This is the favorites page.</p>
+      </section>
+    </div>
     <footer>
-      &copy;2016 OurCoolCompany.com
+      <p>&copy; 2016</p>
     </footer>
+
+    <!--Scripts-->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <!--Vendor scripts-->
+    <script type="text/javascript" src="vendor/scripts/page.js"></script>
+    <script src="vendor/scripts/handlebars-v4.0.5.js"></script>
+
+    <!--Model scripts-->
     <script type="text/javascript" src="scripts/models/jobPostModel.js"></script>
+
+    <!--View scripts-->
+    <script type="text/javascript" src="scripts/views/jobPostView.js"></script>
+    <script type="text/javascript" src="scripts/views/resultsView.js"></script>
+
+    <!--Controller scripts-->
+    <script type="text/javascript" src="scripts/controllers/searchController.js"></script>
+    <script type="text/javascript" src="scripts/controllers/resultsController.js"></script>
+    <script type="text/javascript" src="scripts/controllers/companyController.js"></script>
+    <script type="text/javascript" src="scripts/controllers/favoritesController.js"></script>
+    <script type="text/javascript" src="scripts/controllers/routes.js"></script>
   </body>
 </html>

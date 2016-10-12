@@ -1,5 +1,17 @@
+'use strict';
 (function(module) {
+  var jobView = {};
 
-  module.jobPostView = jobPostView;
+  jobView.renderJobResults = function(){
+    JobPost.allJobPosts.forEach(function(job){
+      console.log('inside forEach loop', job);
+      $('#results-page').append( job.toHtml() );
+      //JobPost.prototype.toHtml
+    });
+  };
+  JobPost.fetchResults(jobView.renderJobResults);
+
+  module.jobView = jobView;
+
 
 })(window);
