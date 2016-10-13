@@ -5,13 +5,13 @@
   resultsView.map = {};
 
   resultsView.renderJobResults = function(){
+    $('#job-results').empty();
     JobPost.allJobPosts.forEach(function(job){
       console.log('inside forEach loop', job);
-      $('#results-page').append( job.toHtml() );
+      $('#job-results').append( job.toHtml() );
       //JobPost.prototype.toHtml
     });
   };
-
 
   resultsView.renderMap = function() {
     console.log('rendering map');
@@ -22,9 +22,10 @@
     resultsView.renderMap();
   };
 
-  JobPost.fetchResults(resultsView.renderResultsPage);
+  resultsView.getResults = function(searchparams) {
+    JobPost.fetchResults(searchparams, resultsView.renderResultsPage);
+  };
 
   module.resultsView = resultsView;
-
 
 })(window);
