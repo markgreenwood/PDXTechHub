@@ -18,28 +18,36 @@
     <script id="job-template" type="text/x-handlebars-template">
          <article>
            <ul>
-             <li><a href="{{url}}" target="_blank">{{jobtitle}}</a></li>
-             <li>{{company}}</li>
-             <li>{{snippet}}</li>
-             <li>{{formattedLocation}}</li>
-             <li>{{formattedRelativeTime}}</li>
+             <li id="job-title"><a href="{{url}}" target="_blank">{{jobtitle}}></a></li>
+             <li id="job-company"> at {{company}}</li>
+             <li id="job-snippet">{{snippet}}</li>
+             <li id="job-loc">{{formattedLocation}}</li>
+             <li id="job-date">{{formattedRelativeTime}}</li>
            </ul>
          </article>
        </script>
   </head>
 
   <body>
+
     <header class="main-header">
-      <div class="logo">
+      <div class="header-wrap">
+      <!-- <div class="logo">
           <img src="images/pdx-logo-1.png"/>
           <h1>tech hub</h1>
-      </div>
+      </div> -->
+
         <!--Main nav-->
         <nav class="main-nav">
           <!--Hamburger menu-->
           <!-- <div class="hamburger">
             <img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" alt="hamburger menu icon"/>
           </div> -->
+
+          <div class="logo">
+              <img src="images/pdx-logo-1.png"/>
+              <h1>tech hub</h1>
+          </div>
           <ul>
             <li class="navtab"><a href="/">SEARCH</a></li>
             <li class="navtab"><a href="/results">RESULTS</a></li>
@@ -47,7 +55,8 @@
             <li class="navtab"><a href="/favorites">FAVORITES</a></li>
           </ul>
         </nav>
-    </header>
+     </div> <!--/.header-wrap -->
+  </header>
 
     <main>
       <!--Background image-->
@@ -55,14 +64,15 @@
         <img src="images/workspace-3_720.jpg"/>
       </div>
 
+      <!-- This was an early template test and is superceed
       <article class="template" data-category="placeholder-category">
         <h2 id="job-title"></h2>
-      </article>
+      </article> -->
 
       <section id="landing-page" class="tab-content">
         <div class="intro-p">
           <p id="question">There are an estimated 20,600 tech jobs in Portland, but how do you find the one that's right for you?</p>
-          <p id="pitch">This web app was built with the x-person in mind. We'll help you identify opportunities in your geographic area and in industries that are a good fit for you. Choose your search preferences below to see what's out there!</p>
+          <p id="pitch">This web app was built for the job-seeking web developer. We'll help you identify job opportunities in your geographic area. Choose your search preferences below to see what's out there!</p>
         </div>
 
         <div class="search-filter">
@@ -87,15 +97,15 @@
             <option>C++</option>
             <option>C#/.NET</option>
           </select>
-          <button id="submit-search" type="submit">Submit</button>
         </div>
+        <button id="submit-search" type="submit">Submit</button>
       </section>
 
       <div class="tab-container">
         <section  id="results-page" class="tab-content">
           <div id="map-results">
-            <hr class="results-title-hr">
-            <h1>where are the jobs?</h1>
+            <!-- <hr class="results-title-hr"> -->
+            <h1><img class="straburst-image" src="images/starburst1.png">where are the jobs?<img class="straburst-image" src="images/starburst1.png"></h1>
             <hr class="results-title-hr">
             <ul>
               <li>this is a map</li>
@@ -103,9 +113,13 @@
             </ul>
           </div>
           <div id="job-results">
+
+            <h1><img class="straburst-image" src="images/starburst1.png">your job results<img class="straburst-image" src="images/starburst1.png"></h1>
             <hr class="results-title-hr">
-            <h1>your job results</h1>
-            <hr class="results-title-hr">
+            <ul>
+              <li>No search resutls yet. <br>Have you <a href="#">entered search terms</a> and clicked the <a href="#">submit</a> button?</li><!-- this should be added to the js -->
+            </ul>
+
           </div>
         </section>
 

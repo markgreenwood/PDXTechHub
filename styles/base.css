@@ -8,30 +8,37 @@ body {
 .background-image img {
   display: flex;
   width: 100%;
-  height: 100%
+  height: 100%;
 }
-
 /* Header container */
 .main-header, .main-nav {
   position: absolute;
   display: block;
-  margin: auto 0;
-  width: 99%;
+  margin: 0 auto;
+  width: 100%;
+  /*background-color: rgba(255,255,255,.5);*/
 }
-
+/*.main-nav {
+  padding-bottom:100px;
+  background-image:url("../images/workspace-3_720.jpg");
+  background-size: cover;
+}*/
 .logo img {
   display: block;
-  width: 50px;
+  width: 75px;
   margin: 0 auto;
+  padding-top: 20px;
 }
 
 .logo h1 {
   font-family: 'Lobster', cursive;
-  font-size: 1em;
+  font-size: 1.5em;
   text-align: center;
   color: #efefef;
   padding: 0px;
   margin: 0px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 1px #e1a94c;
 }
 
 /* Main nav */
@@ -39,6 +46,7 @@ body {
   display: block;
   list-style-type: none;
   padding: 0px;
+  background-color: rgba(255,255,255,.5);
 }
 
 .main-nav li {
@@ -50,7 +58,7 @@ body {
 }
 
 a, a:link, a:active {
-  text-decoration: none;
+  /*text-decoration: none;*/
   color: #333333;
 }
 
@@ -84,23 +92,25 @@ a:visited {
 
 .search-filter {
   display: block;
-  font-size: .5em;
+  width: 600px;
+  margin: 0 auto;
 }
 
 #city-selector, #radius-selector, #biz-type-selector {
   display: inline-block;
-  float: left;
-  width: 70px;
-  margin: 0px;
-  padding: 0px;
+  font-size: 1em;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
 }
 
 #submit-search {
-  width: 70px;
-  margin: auto 0;
+  width: 100px;
+  margin: 10px auto;
   display: block;
-  float: right;
-  clear: both;
+  font-size: 1em;
+  text-align: center;
+  padding: 5px;
 }
 
 /* Tab container */
@@ -123,4 +133,7 @@ footer p {
 }
 li {
   display: block;
+}
+.tab-content {
+  clear: both;
 }
