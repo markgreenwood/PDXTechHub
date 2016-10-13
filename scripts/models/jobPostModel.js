@@ -32,8 +32,8 @@
         console.log(data);
         JobPost.loadAll(data.results);
         nextFunction();
+        populateLocalStorage();
       });
-      populateLocalStorage();
     }
   };
 
