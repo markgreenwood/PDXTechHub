@@ -1,161 +1,160 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>PDX Tech Hub</title>
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>PDX Tech Hub</title>
 
-    <!-- Imported Font Links -->
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Oswald" rel="stylesheet">
+  <!-- Imported Font Links -->
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Oswald" rel="stylesheet">
 
-    <!-- CSS Script Links-->
-    <link rel='stylesheet' href='vendor/styles/normalize.css'>
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel='stylesheet' href='styles/icons.css'>
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/module.css">
+  <!-- CSS Script Links-->
+  <link rel='stylesheet' href='vendor/styles/normalize.css'>
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel='stylesheet' href='styles/icons.css'>
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/module.css">
 
-    <script id="job-template" type="text/x-handlebars-template">
-         <article>
-           <ul>
-             <li id="job-title"><a href="{{url}}" target="_blank">{{jobtitle}}></a></li>
-             <li id="job-company"> at {{company}}</li>
-             <li id="job-snippet">{{snippet}}</li>
-             <li id="job-loc">{{formattedLocation}}</li>
-             <li id="job-date">{{formattedRelativeTime}}</li>
-           </ul>
-         </article>
-       </script>
-  </head>
+  <script id="job-template" type="text/x-handlebars-template">
+    <article>
+      <ul>
+        <li id="job-title"><a href="{{url}}" target="_blank">{{jobtitle}}></a></li>
+        <li id="job-company"> at {{company}}</li>
+        <li id="job-snippet">{{snippet}}</li>
+        <li id="job-loc">{{formattedLocation}}</li>
+        <li id="job-date">{{formattedRelativeTime}}</li>
+      </ul>
+    </article>
+  </script>
+</head>
 
-  <body>
+<body>
 
-    <header class="main-header">
-      <div class="header-wrap">
+  <header class="main-header">
+    <div class="header-wrap">
       <!-- <div class="logo">
-          <img src="images/pdx-logo-1.png"/>
-          <h1>tech hub</h1>
-      </div> -->
+      <img src="images/pdx-logo-1.png"/>
+      <h1>tech hub</h1>
+    </div> -->
 
-        <!--Main nav-->
-        <nav class="main-nav">
-          <!--Hamburger menu-->
-          <!-- <div class="hamburger">
-            <img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" alt="hamburger menu icon"/>
-          </div> -->
+    <!--Main nav-->
+    <nav class="main-nav">
+      <!--Hamburger menu-->
+      <!-- <div class="hamburger">
+      <img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" alt="hamburger menu icon"/>
+    </div> -->
 
-          <div class="logo">
-              <img src="images/pdx-logo-1.png"/>
-              <h1>tech hub</h1>
-          </div>
-          <ul>
-            <li class="navtab"><a href="/">SEARCH</a></li>
-            <li class="navtab"><a href="/results">RESULTS</a></li>
-            <li class="navtab"><a href="/company">COMPANY INFO</a></li>
-            <li class="navtab"><a href="/favorites">FAVORITES</a></li>
-          </ul>
-        </nav>
-     </div> <!--/.header-wrap -->
-  </header>
+    <div class="logo">
+      <img src="images/pdx-logo-1.png"/>
+      <h1>tech hub</h1>
+    </div>
+    <ul>
+      <li class="navtab"><a href="/">SEARCH</a></li>
+      <li class="navtab"><a href="/results">RESULTS</a></li>
+      <li class="navtab"><a href="/company">COMPANY INFO</a></li>
+      <li class="navtab"><a href="/favorites">FAVORITES</a></li>
+    </ul>
+  </nav>
+</div> <!--/.header-wrap -->
+</header>
 
-    <main>
-      <!--Background image-->
-      <div class="background-image">
-        <img src="images/workspace-3_720.jpg"/>
-      </div>
+<main>
+  <!--Background image-->
+  <div class="background-image">
+    <img src="images/workspace-3_720.jpg"/>
+  </div>
 
-      <!-- This was an early template test and is superceed
-      <article class="template" data-category="placeholder-category">
-        <h2 id="job-title"></h2>
-      </article> -->
+  <!-- This was an early template test and is superceed
+  <article class="template" data-category="placeholder-category">
+  <h2 id="job-title"></h2>
+</article> -->
+<div class="tab-container">
+  <section id="landing-page" class="tab-content">
+    <div class="intro-p">
+      <p id="question">There are an estimated 20,600 tech jobs in Portland, but how do you find the one that's right for you?</p>
+      <p id="pitch">This web app was built for the job-seeking web developer. We'll help you identify job opportunities in your geographic area. Choose your search preferences below to see what's out there!</p>
+    </div>
 
-      <section id="landing-page" class="tab-content">
-        <div class="intro-p">
-          <p id="question">There are an estimated 20,600 tech jobs in Portland, but how do you find the one that's right for you?</p>
-          <p id="pitch">This web app was built for the job-seeking web developer. We'll help you identify job opportunities in your geographic area. Choose your search preferences below to see what's out there!</p>
-        </div>
+    <div class="search-filter">
+      <select id="city-selector">
+        <option>Portland</option>
+        <option>Beaverton</option>
+        <option>Gresham</option>
+        <option>Hillsboro</option>
+        <option>Tigard</option>
+      </select>
+      <select id="radius-selector">
+        <option>5 mi</option>
+        <option>10 mi</option>
+        <option>15 mi</option>
+        <option>20 mi</option>
+        <option>25 mi</option>
+      </select>
+      <select id="language-selector">
+        <option>JavaScript</option>
+        <option>Python</option>
+        <option>PHP</option>
+        <option>C++</option>
+        <option>C#/.NET</option>
+      </select>
+    </div>
+    <button id="submit-search" type="submit">Submit</button>
+  </section>
 
-        <div class="search-filter">
-          <select id="city-selector">
-            <option>Portland</option>
-            <option>Beaverton</option>
-            <option>Gresham</option>
-            <option>Hillsboro</option>
-            <option>Tigard</option>
-          </select>
-          <select id="radius-selector">
-            <option>5 mi</option>
-            <option>10 mi</option>
-            <option>15 mi</option>
-            <option>20 mi</option>
-            <option>25 mi</option>
-          </select>
-          <select id="language-selector">
-            <option>JavaScript</option>
-            <option>Python</option>
-            <option>PHP</option>
-            <option>C++</option>
-            <option>C#/.NET</option>
-          </select>
-        </div>
-        <button id="submit-search" type="submit">Submit</button>
-      </section>
+  <section id="results-page" class="tab-content clearfix">
+    <div id="map-results">
+      <!-- <hr class="results-title-hr"> -->
+      <h1><img class="straburst-image" src="images/starburst1.png">where are the jobs?<img class="straburst-image" src="images/starburst1.png"></h1>
+      <hr class="results-title-hr">
+      <ul>
+        <li>this is a map</li>
+        <li>i know it doesn't look like a map</li>
+      </ul>
+    </div>
+    <div id="job-results">
 
-      <div class="tab-container">
-        <section  id="results-page" class="tab-content">
-          <div id="map-results">
-            <!-- <hr class="results-title-hr"> -->
-            <h1><img class="straburst-image" src="images/starburst1.png">where are the jobs?<img class="straburst-image" src="images/starburst1.png"></h1>
-            <hr class="results-title-hr">
-            <ul>
-              <li>this is a map</li>
-              <li>i know it doesn't look like a map</li>
-            </ul>
-          </div>
-          <div id="job-results">
+      <h1><img class="straburst-image" src="images/starburst1.png">your job results<img class="straburst-image" src="images/starburst1.png"></h1>
+      <hr class="results-title-hr">
+      <ul>
+        <li>No search resutls yet. <br>Have you <a href="#">entered search terms</a> and clicked the <a href="#">submit</a> button?</li><!-- this should be added to the js -->
+      </ul>
 
-            <h1><img class="straburst-image" src="images/starburst1.png">your job results<img class="straburst-image" src="images/starburst1.png"></h1>
-            <hr class="results-title-hr">
-            <ul>
-              <li>No search resutls yet. <br>Have you <a href="#">entered search terms</a> and clicked the <a href="#">submit</a> button?</li><!-- this should be added to the js -->
-            </ul>
+    </div>
+  </section>
 
-          </div>
-        </section>
+  <section id="company-page" class="tab-content">
+  </section>
 
-        <section id="company-page" class="tab-content">
-        </section>
+  <section id="favorites-page" class="tab-content">
+  </section>
 
-        <section id="favorites-page" class="tab-content">
-        </section>
+</div>
+</main>
 
-      </div>
-    </main>
+<footer>
+  <p>&copy; 2016</p>
+</footer>
 
-    <footer>
-      <p>&copy; 2016</p>
-    </footer>
+<!--Scripts-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-    <!--Scripts-->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!--Vendor scripts-->
+<script type="text/javascript" src="vendor/scripts/page.js"></script>
+<script src="vendor/scripts/handlebars-v4.0.5.js"></script>
 
-    <!--Vendor scripts-->
-    <script type="text/javascript" src="vendor/scripts/page.js"></script>
-    <script src="vendor/scripts/handlebars-v4.0.5.js"></script>
+<!--Model scripts-->
+<script type="text/javascript" src="scripts/models/jobPostModel.js"></script>
 
-    <!--Model scripts-->
-    <script type="text/javascript" src="scripts/models/jobPostModel.js"></script>
+<!--View scripts-->
+<!-- <script type="text/javascript" src="scripts/views/jobPostView.js"></script> -->
+<script type="text/javascript" src="scripts/views/resultsView.js"></script>
+<script type="text/javascript" src="scripts/views/searchView.js"></script>
 
-    <!--View scripts-->
-    <!-- <script type="text/javascript" src="scripts/views/jobPostView.js"></script> -->
-    <script type="text/javascript" src="scripts/views/resultsView.js"></script>
-    <script type="text/javascript" src="scripts/views/searchView.js"></script>
-
-    <!--Controller scripts-->
-    <script type="text/javascript" src="scripts/controllers/searchController.js"></script>
-    <script type="text/javascript" src="scripts/controllers/resultsController.js"></script>
-    <script type="text/javascript" src="scripts/controllers/companyController.js"></script>
-    <script type="text/javascript" src="scripts/controllers/favoritesController.js"></script>
-    <script type="text/javascript" src="scripts/controllers/routes.js"></script>
-  </body>
+<!--Controller scripts-->
+<script type="text/javascript" src="scripts/controllers/searchController.js"></script>
+<script type="text/javascript" src="scripts/controllers/resultsController.js"></script>
+<script type="text/javascript" src="scripts/controllers/companyController.js"></script>
+<script type="text/javascript" src="scripts/controllers/favoritesController.js"></script>
+<script type="text/javascript" src="scripts/controllers/routes.js"></script>
+</body>
 </html>

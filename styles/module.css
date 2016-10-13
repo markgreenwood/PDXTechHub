@@ -1,6 +1,29 @@
 /* Media queries */
+/*Media Queries for Results Page*/
+@media only screen and (min-width : 913px) {
+  #map-results {
+    display: inline-block;
+    float: left;
+    margin: 1%;
+    width: 47%;
+  }
+  #job-results {
+    display: inline-block;
+    float: right;
+    margin: 1%;
+    width: 47%;
+  }
+}
 
-/* Smartphones */
+/*@media only screen and (min-width : 1000px) {
+  #job-results, #map-results {
+    width:1000px;
+    margin: 0 auto;
+    display: block;
+  }
+}*/
+
+/*Tablets, desktops, laptops */
 /*@media only screen and (min-device-width : 320px) and (max-device-width : 736px) {
   .main-nav ul {
     display: block;
