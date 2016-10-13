@@ -5,10 +5,10 @@
   resultsView.map = {};
 
   resultsView.renderJobResults = function(){
-    $('#job-results').empty();
+    $('#job-listings').empty();
     JobPost.allJobPosts.forEach(function(job){
       console.log('inside forEach loop', job);
-      $('#job-results').append( job.toHtml() );
+      $('#job-listings').append( job.toHtml() );
       //JobPost.prototype.toHtml
     });
   };
