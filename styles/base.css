@@ -1,142 +1,81 @@
 body {
   font-family: 'Oswald', sans-serif;
-  font-size: 1em;
   color: #333333;
   background-color: #efefef;
 }
 
-.background-image img {
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-/* Header container */
-.main-header, .main-nav {
-  position: absolute;
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  /*background-color: rgba(255,255,255,.5);*/
-}
-/*.main-nav {
-  padding-bottom:100px;
-  background-image:url("../images/workspace-3_720.jpg");
-  background-size: cover;
-}*/
-.logo img {
-  display: block;
-  width: 75px;
-  margin: 0 auto;
-  padding-top: 20px;
+html, body, main, .tab-container, #results-page, #map-results {
+ height: 100%;
 }
 
+/* Header logo */
 .logo h1 {
   font-family: 'Lobster', cursive;
-  font-size: 1.5em;
+  font-size: 2em;
   text-align: center;
   color: #efefef;
-  padding: 0px;
-  margin: 0px;
-  margin-bottom: 10px;
   text-shadow: 2px 2px 1px #e1a94c;
 }
 
 /* Main nav */
 .main-nav ul {
-  display: block;
-  list-style-type: none;
-  padding: 0px;
-  background-color: rgba(255,255,255,.5);
+  background-color: rgba(255,255,255,.3);
 }
 
 .main-nav li {
-  font-size: .5em;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom: 1px solid #efefef;
+  font-size: .75em;
   text-align: center;
+  border-bottom: 1px solid #efefef;
 }
 
 a, a:link, a:active {
-  /*text-decoration: none;*/
+  color: #e1a94c;
+  text-decoration: none;
+}
+
+a:hover, a:focus a:visited {
+  color: #418259;
+}
+
+/* Main: landing-page */
+.intro h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+  text-align: center;
   color: #333333;
-}
-
-a:hover, a:focus {
-  color: #e1a94c;
-}
-
-a:visited {
-  color: #e1a94c;
-}
-
-/* Main content */
-#landing-page {
-  margin: 30px;
-}
-
-.intro-p {
-  position: relative;
 }
 
 #question {
   color: #bd5632;
-  font-size: 1em;
+  font-size: .9em;
   text-align: center;
 }
 
-#pitch {
-  font-size: .6em;
+#pitch, #ipsum {
+  font-size: .75em;
   text-align: left;
 }
 
-.search-filter {
-  display: block;
-  width: 600px;
-  margin: 0 auto;
+/* Results page */
+#map-results {
+  background-color: rgba(125, 108, 91, .05);
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 3px;
 }
 
-#city-selector, #radius-selector, #biz-type-selector {
-  display: inline-block;
-  font-size: 1em;
-  width: 100px;
-  margin: 10px;
-  padding: 10px;
+#job-results {
+ background-color: rgba(125, 108, 91, .05);
+ border: 1px solid rgba(255, 255, 255, .5);
+ border-radius: 3px;
 }
 
-#submit-search {
-  width: 100px;
-  margin: 10px auto;
-  display: block;
-  font-size: 1em;
+#job-results h1, #map-results h1 {
   text-align: center;
-  padding: 5px;
-}
-
-/* Tab container */
-.tab-container {
-
+  font-family: 'Lobster', cursive;
 }
 
 /* Footer */
-footer {
-  clear: both;
-}
-
 footer p {
-  display: block;
   text-align: center;
   font-family: 'Lobster', cursive;
-  padding: 2%;
-  margin: 0 auto;
-}
-
-.template {
-  display: none;
-}
-li {
-  display: block;
-}
-.tab-content {
-  clear: both;
 }
