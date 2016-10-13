@@ -46,6 +46,7 @@ body {
   display: block;
   list-style-type: none;
   padding: 0px;
+  background-color: rgba(255,255,255,.5);
 }
 
 .main-nav li {
@@ -91,24 +92,24 @@ a:visited {
 
 .search-filter {
   display: block;
-  font-size: .5em;
+  width: 600px;
+  margin: 0 auto;
 }
 
 #city-selector, #radius-selector, #biz-type-selector {
   display: inline-block;
   font-size: 1em;
-  width: 70px;
-  margin: 20px;
+  width: 100px;
+  margin: 10px;
   padding: 10px;
 }
 
 #submit-search {
-  width: 70px;
+  width: 100px;
   margin: 10px auto;
   display: block;
-  font-size: 1.5em;
+  font-size: 1em;
   text-align: center;
-  clear: both;
   padding: 5px;
 }
 
