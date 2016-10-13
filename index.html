@@ -29,133 +29,124 @@
 </head>
 
 <body>
-
   <header class="main-header">
     <div class="header-wrap">
       <!-- <div class="logo">
       <img src="images/pdx-logo-1.png"/>
       <h1>tech hub</h1>
     </div> -->
-
     <!--Main nav-->
     <nav class="main-nav">
-      <!--Hamburger menu-->
-      <!-- <div class="hamburger">
-      <img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" alt="hamburger menu icon"/>
-    </div> -->
-
-    <div class="logo">
-      <img src="images/pdx-logo-1.png"/>
-      <h1>tech hub</h1>
-    </div>
-    <ul>
-      <li class="navtab"><a href="/">SEARCH</a></li>
-      <li class="navtab"><a href="/results">RESULTS</a></li>
-      <li class="navtab"><a href="/company">COMPANY INFO</a></li>
-      <li class="navtab"><a href="/favorites">FAVORITES</a></li>
-    </ul>
-  </nav>
-</div> <!--/.header-wrap -->
-</header>
-
-<main>
-  <!--Background image-->
-  <div class="background-image">
-    <img src="images/workspace-3_720.jpg"/>
-  </div>
-
-  <!-- This was an early template test and is superceed
-  <article class="template" data-category="placeholder-category">
-  <h2 id="job-title"></h2>
-</article> -->
-<div class="tab-container">
-  <section id="landing-page" class="tab-content">
-    <div class="intro-p">
-      <p id="question">There are an estimated 20,600 tech jobs in Portland, but how do you find the one that's right for you?</p>
-      <p id="pitch">This web app was built for the job-seeking web developer. We'll help you identify job opportunities in your geographic area. Choose your search preferences below to see what's out there!</p>
-    </div>
-
-    <div class="search-filter">
-      <select id="city-selector">
-        <option>Portland</option>
-        <option>Beaverton</option>
-        <option>Gresham</option>
-        <option>Hillsboro</option>
-        <option>Tigard</option>
-      </select>
-      <select id="radius-selector">
-        <option>5 mi</option>
-        <option>10 mi</option>
-        <option>15 mi</option>
-        <option>20 mi</option>
-        <option>25 mi</option>
-      </select>
-      <select id="language-selector">
-        <option>JavaScript</option>
-        <option>Python</option>
-        <option>PHP</option>
-        <option>C++</option>
-        <option>C#/.NET</option>
-      </select>
-    </div>
-    <button id="submit-search" type="submit">Submit</button>
-  </section>
-
-  <section id="results-page" class="tab-content clearfix">
-    <div id="map-results" class="clearfix">
-      <!-- <hr class="results-title-hr"> -->
-      <h1><img class="straburst-image" src="images/starburst1.png">where are the jobs?<img class="straburst-image" src="images/starburst1.png"></h1>
-      <hr class="results-title-hr">
+      <div class="logo">
+        <img src="images/pdx-logo-1.png"/>
+        <h1>tech hub</h1>
+      </div>
       <ul>
-        <li>this is a map</li>
-        <li>i know it doesn't look like a map</li>
+        <li class="navtab"><a href="/">SEARCH</a></li>
+        <li class="navtab"><a href="/results">RESULTS</a></li>
+        <li class="navtab"><a href="/company">COMPANY INFO</a></li>
+        <li class="navtab"><a href="/favorites">FAVORITES</a></li>
       </ul>
+    </nav>
+  </div> <!--/.header-wrap -->
+  </header>
+
+  <main>
+    <!--Background image-->
+    <div class="background-image">
+      <img src="images/workspace-3_720.jpg"/>
     </div>
-    <div id="job-results">
+    <!-- This was an early template test and is superceed
+    <article class="template" data-category="placeholder-category">
+    <h2 id="job-title"></h2>
+    </article> -->
+    <div class="tab-container">
+      <section id="landing-page" class="tab-content">
+        <div class="intro">
+          <h1>hello, talented.</h1>
+          <p id="question">There are an estimated 20,600 tech jobs in Portland, but how do you find the best fit for <em>you</em>?</p>
+          <p id="pitch">This web app was built for the job-seeking web developer. We'll help you identify job opportunities in your geographic area. Choose your search preferences below to see what's out there!</p>
+          <p id="ipsum">Sartorial blue bottle franzen, blog skateboard viral chicharrones pork belly ramps sustainable 90's asymmetrical master cleanse hell of vegan. Cornhole edison bulb fixie cred. Artisan hella health goth bushwick, iPhone offal chia trust fund copper mug scenester next level master cleanse twee umami. Typewriter seitan cronut portland, salvia distillery prism you probably haven't heard of them tote bag banh mi four dollar toast woke franzen. Fam truffaut jianbing paleo 3 wolf moon master cleanse. Heirloom pok pok four loko, succulents roof party yr typewriter deep v gentrify. Roof party retro twee, austin shoreditch next level vegan bespoke.</p>
+        </div>
 
-      <h1><img class="straburst-image" src="images/starburst1.png">your job results<img class="straburst-image" src="images/starburst1.png"></h1>
-      <hr class="results-title-hr">
-      <ul>
-        <li>No search resutls yet. <br>Have you <a href="#">entered search terms</a> and clicked the <a href="#">submit</a> button?</li><!-- this should be added to the js -->
-      </ul>
+        <div class="search-filter">
+          <select id="city-selector">
+            <option>Portland</option>
+            <option>Beaverton</option>
+            <option>Gresham</option>
+            <option>Hillsboro</option>
+            <option>Tigard</option>
+          </select>
+          <select id="radius-selector">
+            <option>5 mi</option>
+            <option>10 mi</option>
+            <option>15 mi</option>
+            <option>20 mi</option>
+            <option>25 mi</option>
+          </select>
+          <select id="language-selector">
+            <option>JavaScript</option>
+            <option>Python</option>
+            <option>PHP</option>
+            <option>C++</option>
+            <option>C#/.NET</option>
+          </select>
+        </div>
+        <button id="submit-search" type="submit">Submit</button>
+      </section>
+
+      <section id="results-page" class="tab-content clearfix">
+        <div id="map-results" class="clearfix">
+          <h1><img class="straburst-image" src="images/starburst1.png">where are the jobs?<img class="straburst-image" src="images/starburst1.png"></h1>
+          <hr class="results-title-hr">
+          <ul>
+            <li>this is a map</li>
+            <li>i know it doesn't look like a map</li>
+          </ul>
+        </div>
+
+        <div id="job-results">
+          <h1><img class="straburst-image" src="images/starburst1.png">your job results<img class="straburst-image" src="images/starburst1.png"></h1>
+          <hr class="results-title-hr">
+          <ul>
+            <li>No search results yet! <br>Have you <a href="#">entered search terms</a> and clicked the <a href="#">submit</a> button?</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="company-page" class="tab-content">
+      </section>
+
+      <section id="favorites-page" class="tab-content">
+      </section>
 
     </div>
-  </section>
+  </main>
 
-  <section id="company-page" class="tab-content">
-  </section>
+  <footer>
+    <p>&copy; 2016</p>
+  </footer>
 
-  <section id="favorites-page" class="tab-content">
-  </section>
+  <!--Scripts-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-</div>
-</main>
+  <!--Vendor scripts-->
+  <script type="text/javascript" src="vendor/scripts/page.js"></script>
+  <script src="vendor/scripts/handlebars-v4.0.5.js"></script>
 
-<footer>
-  <p>&copy; 2016</p>
-</footer>
+  <!--Model scripts-->
+  <script type="text/javascript" src="scripts/models/jobPostModel.js"></script>
 
-<!--Scripts-->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!--View scripts-->
+  <script type="text/javascript" src="scripts/views/resultsView.js"></script>
+  <script type="text/javascript" src="scripts/views/searchView.js"></script>
 
-<!--Vendor scripts-->
-<script type="text/javascript" src="vendor/scripts/page.js"></script>
-<script src="vendor/scripts/handlebars-v4.0.5.js"></script>
-
-<!--Model scripts-->
-<script type="text/javascript" src="scripts/models/jobPostModel.js"></script>
-
-<!--View scripts-->
-<!-- <script type="text/javascript" src="scripts/views/jobPostView.js"></script> -->
-<script type="text/javascript" src="scripts/views/resultsView.js"></script>
-<script type="text/javascript" src="scripts/views/searchView.js"></script>
-
-<!--Controller scripts-->
-<script type="text/javascript" src="scripts/controllers/searchController.js"></script>
-<script type="text/javascript" src="scripts/controllers/resultsController.js"></script>
-<script type="text/javascript" src="scripts/controllers/companyController.js"></script>
-<script type="text/javascript" src="scripts/controllers/favoritesController.js"></script>
-<script type="text/javascript" src="scripts/controllers/routes.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhXddeaGDs_H0qpscMGy4fsg9lsCbKCro&callback=resultsView.initMap"></script>
+  <!--Controller scripts-->
+  <script type="text/javascript" src="scripts/controllers/searchController.js"></script>
+  <script type="text/javascript" src="scripts/controllers/resultsController.js"></script>
+  <script type="text/javascript" src="scripts/controllers/companyController.js"></script>
+  <script type="text/javascript" src="scripts/controllers/favoritesController.js"></script>
+  <script type="text/javascript" src="scripts/controllers/routes.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhXddeaGDs_H0qpscMGy4fsg9lsCbKCro&callback=resultsView.initMap"></script>
 </body>
 </html>
