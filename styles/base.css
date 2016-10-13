@@ -8,30 +8,39 @@ body {
 .background-image img {
   display: flex;
   width: 100%;
-  height: 100%
+  height: 100%;
+  top: -100;
 }
-
 /* Header container */
 .main-header, .main-nav {
   position: absolute;
   display: block;
-  margin: auto 0;
-  width: 99%;
-}
+  margin: 0 auto;
+  width: 100%;
+  background-color: rgba(255,255,255,.5);
 
+}
+.main-nav {
+  padding-bottom:100px;
+  background-image:url("../images/workspace-3_720.jpg");
+  background-size: cover;
+}
 .logo img {
   display: block;
-  width: 50px;
+  width: 75px;
   margin: 0 auto;
+  padding-top: 20px;
 }
 
 .logo h1 {
   font-family: 'Lobster', cursive;
-  font-size: 1em;
+  font-size: 1.5em;
   text-align: center;
   color: #efefef;
   padding: 0px;
   margin: 0px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 1px #e1a94c;
 }
 
 /* Main nav */
@@ -50,7 +59,7 @@ body {
 }
 
 a, a:link, a:active {
-  text-decoration: none;
+  /*text-decoration: none;*/
   color: #333333;
 }
 
@@ -123,4 +132,7 @@ footer p {
 }
 li {
   display: block;
+}
+.tab-content {
+  clear: both;
 }
