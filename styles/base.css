@@ -119,9 +119,12 @@ a:visited {
 }
 
 /* Footer */
+footer {
+  clear: both;
+}
+
 footer p {
   display: block;
-  clear: both;
   text-align: center;
   font-family: 'Lobster', cursive;
   padding: 2%;
