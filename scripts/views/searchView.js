@@ -8,6 +8,7 @@
       var lang = $('#language-selector').val();
       console.log('City: ' + city + ', Radius: ' + radius + ', Language: ' + lang);
       resultsView.getResults({ 'city': city, 'radius': radius, 'language': lang });
+      resultsController.reveal();
     });
   };
 
