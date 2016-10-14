@@ -1,5 +1,6 @@
 body {
   font-family: 'Oswald', sans-serif;
+  font-size: 1em;
   color: #333333;
   background-color: #efefef;
 }
@@ -8,7 +9,7 @@ html, body, main, .tab-container, #results-page, #map-results {
  height: 100%;
 }
 
-/* Header logo */
+/* Header: logo */
 .logo h1 {
   font-family: 'Lobster', cursive;
   font-size: 2em;
@@ -17,8 +18,9 @@ html, body, main, .tab-container, #results-page, #map-results {
   text-shadow: 2px 2px 1px #e1a94c;
 }
 
-/* Main nav */
+/* Header: main-nav */
 .main-nav ul {
+  list-style-type: none;
   background-color: rgba(255,255,255,.3);
 }
 
@@ -56,7 +58,15 @@ a:hover, a:focus a:visited {
   text-align: left;
 }
 
-/* Results page */
+#submit-search {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  background-color: #418259;
+  border-radius: 10px;
+  border: 1px solid #efefef;
+}
+
+/* Main: results-page */
 #map-results {
   background-color: rgba(125, 108, 91, .05);
   border: 1px solid rgba(255, 255, 255, .5);
@@ -72,6 +82,24 @@ a:hover, a:focus a:visited {
 #job-results h1, #map-results h1 {
   text-align: center;
   font-family: 'Lobster', cursive;
+}
+
+/* Results-page: job listings */*/
+#job-title {
+ font-size: 1.25em;
+ font-weight: 800;
+}
+#job-company {
+ font-size: 1em;
+ font-weight: lighter;
+}
+#job-snippet {
+  font-size: 1.25em;
+  font-weight: bolder;
+}
+#job-loc, #job-date {
+  font-size: .75em;
+  font-weight: lighter;
 }
 
 /* Footer */
