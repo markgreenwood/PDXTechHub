@@ -19,9 +19,9 @@
     <article>
       <ul>
         <li id="job-title"><a href="{{url}}" target="_blank">{{jobtitle}}</a></li>
-        <li id="job-company"> at {{company}}</li>
+        <li id="job-company"> at {{company}}<span id="job-snippet"> ({{formattedLocation}})</span></li>
         <li id="job-snippet">{{{snippet}}}</li>
-        <li id="job-loc">{{formattedLocation}}</li>
+        <!-- <li id="job-loc">{{formattedLocation}}</li> -->
         <li id="job-date">{{formattedRelativeTime}}</li>
       </ul>
     </article>
@@ -69,30 +69,31 @@
           <p id="pitch">This web app was built for the job-seeking web developer. We'll help you identify job opportunities in your geographic area. Choose your search preferences below to see what's out there!</p>
           <p id="ipsum">Sartorial blue bottle franzen, blog skateboard viral chicharrones pork belly ramps sustainable 90's asymmetrical master cleanse hell of vegan. Cornhole edison bulb fixie cred. Artisan hella health goth bushwick, iPhone offal chia trust fund copper mug scenester next level master cleanse twee umami. Typewriter seitan cronut portland, salvia distillery prism you probably haven't heard of them tote bag banh mi four dollar toast woke franzen. Fam truffaut jianbing paleo 3 wolf moon master cleanse. Heirloom pok pok four loko, succulents roof party yr typewriter deep v gentrify. Roof party retro twee, austin shoreditch next level vegan bespoke.</p>
         </div>
-
-        <div class="search-filter">
-          <select id="city-selector">
-            <option>Portland</option>
-            <option>Beaverton</option>
-            <option>Gresham</option>
-            <option>Hillsboro</option>
-            <option>Tigard</option>
-          </select>
-          <select id="radius-selector">
-            <option>5 mi</option>
-            <option>10 mi</option>
-            <option>15 mi</option>
-            <option>20 mi</option>
-            <option>25 mi</option>
-          </select>
-          <select id="language-selector">
-            <option>JavaScript</option>
-            <option>Python</option>
-            <option>PHP</option>
-            <option>C++</option>
-            <option>C#/.NET</option>
-          </select>
-        </div>
+        <div class="intro">
+          <div class="search-filter">
+            <select id="city-selector">
+              <option>Portland</option>
+              <option>Beaverton</option>
+              <option>Gresham</option>
+              <option>Hillsboro</option>
+              <option>Tigard</option>
+            </select>
+            <select id="radius-selector">
+              <option>5 mi</option>
+              <option>10 mi</option>
+              <option>15 mi</option>
+              <option>20 mi</option>
+              <option>25 mi</option>
+            </select>
+            <select id="language-selector">
+              <option>JavaScript</option>
+              <option>Python</option>
+              <option>PHP</option>
+              <option>C++</option>
+              <option>C#/.NET</option>
+            </select>
+          </div>
+      </div><!--/.intro -->
         <button id="submit-search" type="submit">Submit</button>
       </section>
 
