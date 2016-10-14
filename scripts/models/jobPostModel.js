@@ -1,13 +1,16 @@
 (function(module) {
 
+  // Constructor for JobPost
   function JobPost(opts) {
     Object.keys(opts).forEach(function(key) {
       this[key] = opts[key];
     }, this);
   }
 
+  // The array which will hold the list of all JobPosts from our API call
   JobPost.allJobPosts = [];
 
+  // Render a JobPost as HTML for display
   JobPost.prototype.toHtml = function() {
     var source = $('#job-template').html();
     var template = Handlebars.compile(source);
@@ -15,6 +18,13 @@
     return html;
   };
 
+  // fetchResults is the method that gets all the JobPosts and populates
+  // the allJobPosts array. It checks localStorage to see if there are
+  // cached results, and loads from there if there are. If not, it passes
+  // our search criteria to the API via an AJAX call, loads the array, and
+  // caches the results in localStorage. Finally, after the array is
+  // populated, nextFunction (passed in function) is executed - this is
+  // the callback that renders the results page once we have data.
   JobPost.fetchResults = function(searchparams, nextFunction) {
     // if search_str is not defined, use default search
     var search_str = 'l=' + searchparams.city + ',or&radius=' + searchparams.radius + '&q=' + searchparams.language + '&sort=&st=&jt=&start=&limit=50&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2&format=json';
@@ -29,7 +39,7 @@
       var url = 'http://cors.io/?http://api.indeed.com/ads/apisearch?publisher=7094754948491444&' + search_str;
 
       $.getJSON(url, function(data) {
-        console.log(data);
+        //console.log(data);
         JobPost.loadAll(data.results);
         nextFunction();
         populateLocalStorage();
@@ -37,6 +47,7 @@
     }
   };
 
+  // loadAll populates the JobPost.allJobPosts array from raw JSON data
   JobPost.loadAll = function (jobPostData) {
     jobPostData.forEach(function(job) {
       JobPost.allJobPosts.push(new JobPost(job));
