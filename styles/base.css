@@ -5,7 +5,7 @@ body {
   background-color: #efefef;
 }
 
-html, body, main, .tab-container, #results-page, #map-results, #map-display {
+html, body, #container, main, .tab-container, #results-page, #map-results, #map-display {
  height: 100%;
 }
 

@@ -38,8 +38,7 @@
   resultsView.renderMap = function() {
     console.log('rendering map');
 
-    resultsView.map.panTo(pdxLoc);
-    google.maps.event.trigger(resultsView.map, 'resize');
+    // resultsView.map.panTo(pdxLoc);
     var mkrdata = JobPost.allJobPosts.map(function(post) {
       return {
         lat: post.latitude,
@@ -47,9 +46,9 @@
         company: post.company
       };
     });
-    resultsView.placeMarkers(mkrdata);
-    resultsView.map.panTo(pdxLoc);
-    google.maps.event.trigger(resultsView.map, 'resize');
+    setTimeout(function() {resultsView.map.panTo(pdxLoc);}, 500);
+    setTimeout(function() {resultsView.placeMarkers(mkrdata);}, 500);
+    setTimeout(function() {google.maps.event.trigger(resultsView.map, 'resize');}, 500);
   };
 
   resultsView.renderResultsPage = function() {
