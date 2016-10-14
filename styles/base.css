@@ -61,9 +61,10 @@ a:hover, a:focus a:visited {
 #submit-search {
   font-family: 'Lobster', cursive;
   text-align: center;
-  background-color: #418259;
   border-radius: 10px;
   border: 1px solid #efefef;
+  box-shadow: 1px 1px 1px #333;
+  background-color: #fff;
 }
 
 /* Main: results-page */

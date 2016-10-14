@@ -88,17 +88,20 @@ li {
   margin-bottom: 0;
 }
 
-.search-filter {
+/*.search-filter {
   display: block;
   width: 600px;
   margin: 0 auto;
-}
+  text-align: center;
+}*/
 
-#city-selector, #radius-selector, #biz-type-selector {
-  display: inline-block;
+#city-selector, #radius-selector, #language-selector {
   width: 100px;
-  margin: 10px;
-  padding: 10px;
+  display: inline-block;
+  float: left;
+  margin: 5% 3% 7% 3%;
+  text-align: center;
+
 }
 
 #submit-search {
@@ -106,6 +109,7 @@ li {
   margin: 10px auto;
   display: block;
   padding: 5px;
+  margin-bottom: 20%;
 }
 
 /* Main: results-page */
@@ -119,8 +123,9 @@ li {
   margin-bottom: 30px;
 }
 
-#job-results {
- display: block;
+#job-listings {
+ display: inline-block;
+ height: 605px;
  overflow-y: scroll;
 }
 
@@ -142,12 +147,25 @@ li {
 }
 
 /* Footer */
+#container {
+   min-height:100%;
+   position:relative;
+}
 footer {
-  clear: both;
+  position:absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width:100%;
 }
 
 footer p {
   display: block;
   padding: 2%;
   margin: 0 auto;
+}
+
+hr {
+  width: 80%;
+  opacity: .3;
 }
