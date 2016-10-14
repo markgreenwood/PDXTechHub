@@ -86,18 +86,20 @@ li {
   margin-bottom: 0;
 }
 
-/*.search-filter {
-  display: block;
-  width: 600px;
-  margin: 0 auto;
+.intro-two {
+  margin: 5%;
+}
+
+.search-filter {
+  display: inline-block;
   text-align: center;
-}*/
+  width: 100%;
+  margin-top: 5%;
+}
 
 #city-selector, #radius-selector, #language-selector {
-  width: 100px;
-  display: inline-block;
-  float: left;
-  margin: 5% 3% 7% 3%;
+  width: 25%;
+  margin: 3% 3%;
   text-align: center;
 
 }
@@ -106,8 +108,7 @@ li {
   width: 100px;
   margin: 10px auto;
   display: block;
-  padding: 5px;
-  margin-bottom: 20%;
+  margin-bottom: 5%;
 }
 
 /* Main: results-page */
