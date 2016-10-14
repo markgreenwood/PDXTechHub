@@ -5,7 +5,7 @@ body {
   background-color: #efefef;
 }
 
-html, body, main, .tab-container, #results-page, #map-results, #map-display {
+html, body, #container, main, .tab-container, #results-page, #map-results, #map-display {
  height: 100%;
 }
 
@@ -15,7 +15,7 @@ html, body, main, .tab-container, #results-page, #map-results, #map-display {
   font-size: 2em;
   text-align: center;
   color: #efefef;
-  text-shadow: 2px 2px 1px #e1a94c;
+  text-shadow: 3px 2px 1px rgba(188, 86, 50, .85);
 }
 
 /* Header: main-nav */
@@ -28,6 +28,10 @@ html, body, main, .tab-container, #results-page, #map-results, #map-display {
   font-size: .75em;
   text-align: center;
   border-bottom: 1px solid #efefef;
+}
+
+.navtab {
+  text-shadow: .5px .5px .5px rgba(255, 255, 255, 0.9);
 }
 
 a, a:link, a:active {
@@ -83,24 +87,38 @@ a:hover, a:focus a:visited {
 #job-results h1, #map-results h1 {
   text-align: center;
   font-family: 'Lobster', cursive;
+  /*text-shadow: 1px 1px 1px #e1a94c;
+  box-shadow: .5px .5px .5px #e1a94c;
+  width: 110%;*/
 }
 
-/* Results-page: job listings */*/
+/* Results-page: job listings */
 #job-title {
  font-size: 1.25em;
  font-weight: 800;
+ line-height: 1.2;
 }
 #job-company {
- font-size: 1em;
+ font-size: 1.1em;
  font-weight: lighter;
+ margin-bottom: 3px;
 }
 #job-snippet {
-  font-size: 1.25em;
-  font-weight: bolder;
-}
-#job-loc, #job-date {
-  font-size: .75em;
+  font-size: .9em;
   font-weight: lighter;
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+#job-loc {
+  font-size: .6em;
+
+}
+#job-date {
+  font-size: .75em;
+  text-decoration: overline;
+}
+article {
+  padding: 1%;
 }
 
 /* Footer */
