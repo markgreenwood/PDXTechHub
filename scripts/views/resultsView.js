@@ -17,7 +17,7 @@
 
   resultsView.initMap = function() {
     setTimeout(function() {
-      resultsView.map = new google.maps.Map(document.getElementById('map-results'), {
+      resultsView.map = new google.maps.Map(document.getElementById('map-display'), {
         center: pdxLoc,
         zoom: 12
       });
