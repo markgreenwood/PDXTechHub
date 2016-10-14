@@ -1,12 +1,12 @@
+html, body, #container, main, .tab-container, #results-page, #map-results, #map-display {
+ height: 100%;
+}
+
 body {
   font-family: 'Oswald', sans-serif;
   font-size: 1em;
   color: #333333;
   background-color: #efefef;
-}
-
-html, body, #container, main, .tab-container, #results-page, #map-results, #map-display {
- height: 100%;
 }
 
 /* Header: logo */
@@ -87,9 +87,6 @@ a:hover, a:focus a:visited {
 #job-results h1, #map-results h1 {
   text-align: center;
   font-family: 'Lobster', cursive;
-  /*text-shadow: 1px 1px 1px #e1a94c;
-  box-shadow: .5px .5px .5px #e1a94c;
-  width: 110%;*/
 }
 
 /* Results-page: job listings */
@@ -98,31 +95,29 @@ a:hover, a:focus a:visited {
  font-weight: 800;
  line-height: 1.2;
 }
+
 #job-company {
  font-size: 1.1em;
  font-weight: lighter;
  margin-bottom: 3px;
 }
+
 #job-snippet {
   font-size: .9em;
   font-weight: lighter;
   line-height: 1.6;
   margin-bottom: 5px;
 }
+
 #job-loc {
   font-size: .6em;
-
 }
+
 #job-date {
   font-size: .75em;
   text-decoration: overline;
 }
+
 article {
   padding: 1%;
-}
-
-/* Footer */
-footer p {
-  text-align: center;
-  font-family: 'Lobster', cursive;
 }
