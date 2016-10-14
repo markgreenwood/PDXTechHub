@@ -18,9 +18,9 @@
   <script id="job-template" type="text/x-handlebars-template">
     <article>
       <ul>
-        <li id="job-title"><a href="{{url}}" target="_blank">{{jobtitle}}></a></li>
+        <li id="job-title"><a href="{{url}}" target="_blank">{{jobtitle}}</a></li>
         <li id="job-company"> at {{company}}</li>
-        <li id="job-snippet">{{snippet}}</li>
+        <li id="job-snippet">{{{snippet}}}</li>
         <li id="job-loc">{{formattedLocation}}</li>
         <li id="job-date">{{formattedRelativeTime}}</li>
       </ul>
@@ -38,7 +38,7 @@
     <!--Main nav-->
     <nav class="main-nav">
       <div class="logo">
-        <img src="images/pdx-logo-1.png"/>
+        <img src="images/pdx-logo-oswald.png"/>
         <h1>tech hub</h1>
       </div>
       <ul>
@@ -99,10 +99,12 @@
         <div id="map-results" class="clearfix">
           <h1><img class="straburst-image" src="images/starburst1.png">where are the jobs?<img class="straburst-image" src="images/starburst1.png"></h1>
           <hr class="results-title-hr">
-          <ul>
-            <li>this is a map</li>
-            <li>i know it doesn't look like a map</li>
-          </ul>
+          <div id="map-display">
+            <ul>
+              <li>this is a map</li>
+              <li>i know it doesn't look like a map</li>
+            </ul>
+          </div>
         </div>
 
         <div id="job-results">

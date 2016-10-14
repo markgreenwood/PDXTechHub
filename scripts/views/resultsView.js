@@ -13,12 +13,13 @@
     });
   };
 
+  var pdxLoc = {lat: 45.5231, lng: -122.6765};
+
   resultsView.initMap = function() {
-    var pdxLoc = {lat: 45.512794, lng: -122.679565};
     setTimeout(function() {
-      resultsView.map = new google.maps.Map(document.getElementById('map-results'), {
+      resultsView.map = new google.maps.Map(document.getElementById('map-display'), {
         center: pdxLoc,
-        zoom: 13
+        zoom: 12
       });
     }, 2000);
 
@@ -36,6 +37,9 @@
 
   resultsView.renderMap = function() {
     console.log('rendering map');
+
+    resultsView.map.panTo(pdxLoc);
+    google.maps.event.trigger(resultsView.map, 'resize');
     var mkrdata = JobPost.allJobPosts.map(function(post) {
       return {
         lat: post.latitude,
@@ -44,6 +48,8 @@
       };
     });
     resultsView.placeMarkers(mkrdata);
+    resultsView.map.panTo(pdxLoc);
+    google.maps.event.trigger(resultsView.map, 'resize');
   };
 
   resultsView.renderResultsPage = function() {
@@ -56,5 +62,6 @@
   };
 
   module.resultsView = resultsView;
+  module.pdxLoc = pdxLoc;
 
 })(window);

@@ -16,7 +16,6 @@
 /* Header main-nav */
 .main-nav ul {
   display: block;
-  list-style-type: none;
   padding: 0;
   margin: 3% 0;
 }
@@ -97,7 +96,6 @@ li {
 
 #city-selector, #radius-selector, #biz-type-selector {
   display: inline-block;
-  font-size: 1em;
   width: 100px;
   margin: 10px;
   padding: 10px;
@@ -107,8 +105,6 @@ li {
   width: 100px;
   margin: 10px auto;
   display: block;
-  font-size: 1em;
-  text-align: center;
   padding: 5px;
 }
 
@@ -143,24 +139,6 @@ li {
   margin-bottom: -7px;
   margin-right: 10px;
   margin-left: 8px;
-}
-
-/* Main: results-page: job listings */
-#job-title {
- font-size: 1.25em;
- font-weight: 800;
-}
-#job-company {
- font-size: 1em;
- font-weight: lighter;
-}
-#job-snippet {
-  font-size: 1.25em;
-  font-weight: bolder;
-}
-#job-loc, #job-date {
-  font-size: .75em;
-  font-weight: lighter;
 }
 
 /* Footer */
