@@ -19,13 +19,18 @@
 
   // Initializes the Google map object
   resultsView.initMap = function() {
-    setTimeout(function() {
-      resultsView.map = new google.maps.Map(document.getElementById('map-display'), {
-        center: pdxLoc,
-        zoom: 12
-      });
-    }, 2000);
+    // setTimeout(function() {
+    resultsView.map = new google.maps.Map(document.getElementById('map-display'), {
+      center: pdxLoc,
+      zoom: 12
+    });
+    // }, 2000);
 
+    google.maps.event.addListenerOnce(resultsView.map, 'bounds_changed', function() {
+      resultsView.map.panTo({lat: 45.5231, lng: -122.6765});
+      resultsView.map.setZoom(12);
+      console.log('Map center: ', resultsView.map.getCenter().toString());
+    });
   };
 
   // Takes an array of passed in marker_data (lat, lng, company), creates
@@ -53,9 +58,13 @@
         company: post.company
       };
     });
-    setTimeout(function() {resultsView.map.panTo(pdxLoc);}, 500);
-    setTimeout(function() {resultsView.placeMarkers(mkrdata);}, 500);
+    console.log('Map center (before placeMarkers): ', resultsView.map.getCenter().toString());
+    resultsView.placeMarkers(mkrdata);
+    console.log('Map center (after placeMarkers): ', resultsView.map.getCenter().toString());
+    resultsView.map.panTo(pdxLoc);
+    console.log('Map center (after panTo PDX): ', resultsView.map.getCenter().toString());
     setTimeout(function() {google.maps.event.trigger(resultsView.map, 'resize');}, 500);
+    console.log('Map center (after trigger resize): ', resultsView.map.getCenter().toString());
   };
 
   // Renders the entire results page by first rendering job results
@@ -63,6 +72,7 @@
   resultsView.renderResultsPage = function() {
     resultsView.renderJobResults();
     resultsView.renderMap();
+    console.log('Map center (after renderMap): ', resultsView.map.getCenter().toString());
   };
 
   // When the search parameters are selected and the Submit button is clicked,

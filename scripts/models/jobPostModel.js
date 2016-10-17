@@ -35,6 +35,7 @@
     if (localStorage.getItem('jobListings')) {
       JobPost.loadAll(pullLocalStorage());
       nextFunction();
+      console.log('Map center (after fetchResults): ', resultsView.map.getCenter().toString());
     } else {
       var url = 'http://cors.io/?http://api.indeed.com/ads/apisearch?publisher=7094754948491444&' + search_str;
 
@@ -42,6 +43,7 @@
         //console.log(data);
         JobPost.loadAll(data.results);
         nextFunction();
+        console.log('Map center (after fetchResults): ', resultsView.map.getCenter().toString());
         populateLocalStorage();
       });
     }
