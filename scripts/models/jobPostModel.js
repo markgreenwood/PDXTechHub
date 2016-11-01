@@ -28,20 +28,23 @@
   JobPost.fetchResults = function(searchparams, nextFunction) {
     // if search_str is not defined, use default search
     var search_str = 'l=' + searchparams.city + ',or&radius=' + searchparams.radius + '&q=' + searchparams.language + '&sort=&st=&jt=&start=&limit=50&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2&format=json';
+    // var search_str = 'l=portland,or&radius=20&q=python&sort=&st=&jt=&start=&limit=50&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2&format=json';
 
     // var search_str = search_str || 'q=javascript&l=portland,or&sort=&radius=&st=&jt=&start=&limit=50&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2&format=json';
     //TODO: Eventually route this through server.js to avoid CORS issues
 
-    if (localStorage.getItem('jobListings')) {
+    if (/*localStorage.getItem('jobListings')*/ false) {
       JobPost.loadAll(pullLocalStorage());
       nextFunction();
+      console.log('Map center (after fetchResults): ', resultsView.map.getCenter().toString());
     } else {
-      var url = 'http://cors.io/?http://api.indeed.com/ads/apisearch?publisher=7094754948491444&' + search_str;
+      var url = '/indeed/ads/apisearch?publisher=7094754948491444&' + search_str;
 
       $.getJSON(url, function(data) {
         //console.log(data);
         JobPost.loadAll(data.results);
         nextFunction();
+        console.log('Map center (after fetchResults): ', resultsView.map.getCenter().toString());
         populateLocalStorage();
       });
     }
@@ -49,6 +52,7 @@
 
   // loadAll populates the JobPost.allJobPosts array from raw JSON data
   JobPost.loadAll = function (jobPostData) {
+    JobPost.allJobPosts = []; // clear the listings for each new search
     jobPostData.forEach(function(job) {
       JobPost.allJobPosts.push(new JobPost(job));
     });
@@ -61,6 +65,7 @@
 
   function pullLocalStorage() {
     var jobsFromLocalStorage = JSON.parse(localStorage.getItem('jobListings'));
+
     return jobsFromLocalStorage;
   }
 
