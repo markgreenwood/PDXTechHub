@@ -30,10 +30,7 @@
     var search_str = 'l=' + searchparams.city + ',or&radius=' + searchparams.radius + '&q=' + searchparams.language + '&sort=&st=&jt=&start=&limit=50&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2&format=json';
     // var search_str = 'l=portland,or&radius=20&q=python&sort=&st=&jt=&start=&limit=50&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2&format=json';
 
-    // var search_str = search_str || 'q=javascript&l=portland,or&sort=&radius=&st=&jt=&start=&limit=50&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2&format=json';
-    //TODO: Eventually route this through server.js to avoid CORS issues
-
-    if (/*localStorage.getItem('jobListings')*/ false) {
+    if (/*localStorage.getItem('jobListings')*/ false) { // Temporarily turning off localStorage to get API call working
       JobPost.loadAll(pullLocalStorage());
       nextFunction();
       console.log('Map center (after fetchResults): ', resultsView.map.getCenter().toString());
