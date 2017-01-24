@@ -38,7 +38,7 @@
 /* Main */
 .clearfix::after {
   content: "";
-  display: table;
+  display: block;
   clear: both;
 }
 
@@ -155,4 +155,9 @@ hr {
 .favorites-info img, .company-info img {
   width: 100%;
   margin-top: 5%;
+}
+
+footer {
+  display: block;
+  clear: both;
 }
